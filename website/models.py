@@ -19,7 +19,7 @@ class Language(models.Model):
 class WorkExpirience(models.Model):
     position_name = models.CharField(max_length=255)
     company_name = models.CharField(max_length=255)
-    company_link = models.CharField(blank=True, null=True)
+    company_link = models.CharField(max_length=255, blank=True, null=True)
     start_date = models.DateField()
     end_date = models.DateField()
     location = models.CharField(max_length=255)
