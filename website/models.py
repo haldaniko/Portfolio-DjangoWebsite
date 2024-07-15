@@ -16,7 +16,7 @@ class Language(models.Model):
         return self.name
 
 
-class WorkExpirience(models.Model):
+class WorkExperience(models.Model):
     position_name = models.CharField(max_length=255)
     company_name = models.CharField(max_length=255)
     company_link = models.CharField(max_length=255, blank=True, null=True)
@@ -29,7 +29,7 @@ class WorkExpirience(models.Model):
         return f"{self.position_name} in {self.company_name}"
 
 
-class StudyExpirience(models.Model):
+class StudyExperience(models.Model):
     school_name = models.CharField(max_length=255)
     school_link = models.CharField(max_length=255)
     start_date = models.DateField()
