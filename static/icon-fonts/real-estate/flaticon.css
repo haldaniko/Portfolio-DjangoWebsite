@@ -1,0 +1,80 @@
+	/*
+  	Flaticon icon font: Flaticon
+  	Creation date: 19/10/2017 12:44
+  	*/
+
+@font-face {
+  font-family: "Flaticon";
+  src: url("./Flaticon.eot");
+  src: url("./Flaticon.eot?#iefix") format("embedded-opentype"),
+       url("./Flaticon.woff") format("woff"),
+       url("./Flaticon.ttf") format("truetype"),
+       url("./Flaticon.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Flaticon";
+    src: url("./Flaticon.svg#Flaticon") format("svg");
+  }
+}
+
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+[class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
+  font-family: Flaticon;
+        font-size: 20px;
+font-style: normal;
+margin-left: 20px;
+}
+
+.flaticon-001-blueprint:before { content: "\f100"; }
+.flaticon-002-house-29:before { content: "\f101"; }
+.flaticon-003-house-28:before { content: "\f102"; }
+.flaticon-004-house-27:before { content: "\f103"; }
+.flaticon-005-house-26:before { content: "\f104"; }
+.flaticon-006-house-25:before { content: "\f105"; }
+.flaticon-007-house-24:before { content: "\f106"; }
+.flaticon-008-house-23:before { content: "\f107"; }
+.flaticon-009-pet-house:before { content: "\f108"; }
+.flaticon-010-house-22:before { content: "\f109"; }
+.flaticon-011-house-21:before { content: "\f10a"; }
+.flaticon-012-house-20:before { content: "\f10b"; }
+.flaticon-013-house-19:before { content: "\f10c"; }
+.flaticon-014-house-18:before { content: "\f10d"; }
+.flaticon-015-building-2:before { content: "\f10e"; }
+.flaticon-016-house-17:before { content: "\f10f"; }
+.flaticon-017-house-16:before { content: "\f110"; }
+.flaticon-018-house-15:before { content: "\f111"; }
+.flaticon-019-house-14:before { content: "\f112"; }
+.flaticon-020-house-13:before { content: "\f113"; }
+.flaticon-021-search:before { content: "\f114"; }
+.flaticon-022-smartphone-1:before { content: "\f115"; }
+.flaticon-023-moving-truck:before { content: "\f116"; }
+.flaticon-024-chat:before { content: "\f117"; }
+.flaticon-025-house-12:before { content: "\f118"; }
+.flaticon-026-house-11:before { content: "\f119"; }
+.flaticon-027-house-10:before { content: "\f11a"; }
+.flaticon-028-house-9:before { content: "\f11b"; }
+.flaticon-029-house-8:before { content: "\f11c"; }
+.flaticon-030-auction:before { content: "\f11d"; }
+.flaticon-031-key:before { content: "\f11e"; }
+.flaticon-032-briefcase:before { content: "\f11f"; }
+.flaticon-033-real-estate-1:before { content: "\f120"; }
+.flaticon-034-contract-2:before { content: "\f121"; }
+.flaticon-035-contract-1:before { content: "\f122"; }
+.flaticon-036-contract:before { content: "\f123"; }
+.flaticon-037-house-7:before { content: "\f124"; }
+.flaticon-038-house-6:before { content: "\f125"; }
+.flaticon-039-smartphone:before { content: "\f126"; }
+.flaticon-040-house-5:before { content: "\f127"; }
+.flaticon-041-house-4:before { content: "\f128"; }
+.flaticon-042-building-1:before { content: "\f129"; }
+.flaticon-043-house-3:before { content: "\f12a"; }
+.flaticon-044-house-2:before { content: "\f12b"; }
+.flaticon-045-insurance:before { content: "\f12c"; }
+.flaticon-046-house-1:before { content: "\f12d"; }
+.flaticon-047-real-estate:before { content: "\f12e"; }
+.flaticon-048-building:before { content: "\f12f"; }
+.flaticon-049-house:before { content: "\f130"; }

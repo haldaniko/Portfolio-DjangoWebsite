@@ -1,0 +1,379 @@
+    /*
+    Flaticon icon font: Flaticon
+    Creation date: 22/06/2016 15:38
+    */
+
+    @font-face {
+  font-family: "Flaticon";
+  src: url("./Flaticon.eot");
+  src: url("./Flaticon.eot?#iefix") format("embedded-opentype"),
+       url("./Flaticon.woff") format("woff"),
+       url("./Flaticon.ttf") format("truetype"),
+       url("./Flaticon.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Flaticon";
+    src: url("./Flaticon.svg#Flaticon") format("svg");
+  }
+}
+
+    .fi:before{
+        display: inline-block;
+  font-family: "Flaticon";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+    }
+
+    .flaticon-anesthesia:before { content: "\f100"; }
+.flaticon-antibiotic:before { content: "\f101"; }
+.flaticon-arm:before { content: "\f102"; }
+.flaticon-arm-1:before { content: "\f103"; }
+.flaticon-articulation:before { content: "\f104"; }
+.flaticon-bacteria:before { content: "\f105"; }
+.flaticon-band-aid:before { content: "\f106"; }
+.flaticon-blood-sample:before { content: "\f107"; }
+.flaticon-blood-sample-1:before { content: "\f108"; }
+.flaticon-blood-transfusion:before { content: "\f109"; }
+.flaticon-bone:before { content: "\f10a"; }
+.flaticon-braces:before { content: "\f10b"; }
+.flaticon-braces-1:before { content: "\f10c"; }
+.flaticon-braces-2:before { content: "\f10d"; }
+.flaticon-brain:before { content: "\f10e"; }
+.flaticon-brain-1:before { content: "\f10f"; }
+.flaticon-brain-2:before { content: "\f110"; }
+.flaticon-brain-3:before { content: "\f111"; }
+.flaticon-breast:before { content: "\f112"; }
+.flaticon-breast-1:before { content: "\f113"; }
+.flaticon-breast-2:before { content: "\f114"; }
+.flaticon-breast-3:before { content: "\f115"; }
+.flaticon-breast-4:before { content: "\f116"; }
+.flaticon-breast-implant:before { content: "\f117"; }
+.flaticon-canine:before { content: "\f118"; }
+.flaticon-canine-1:before { content: "\f119"; }
+.flaticon-canine-2:before { content: "\f11a"; }
+.flaticon-canine-3:before { content: "\f11b"; }
+.flaticon-cardiogram:before { content: "\f11c"; }
+.flaticon-cardiogram-1:before { content: "\f11d"; }
+.flaticon-cardiogram-2:before { content: "\f11e"; }
+.flaticon-caries:before { content: "\f11f"; }
+.flaticon-caries-1:before { content: "\f120"; }
+.flaticon-crutches:before { content: "\f121"; }
+.flaticon-dental-drill:before { content: "\f122"; }
+.flaticon-dental-floss:before { content: "\f123"; }
+.flaticon-dna:before { content: "\f124"; }
+.flaticon-dropper:before { content: "\f125"; }
+.flaticon-drugs:before { content: "\f126"; }
+.flaticon-drugs-1:before { content: "\f127"; }
+.flaticon-drugs-2:before { content: "\f128"; }
+.flaticon-drugs-3:before { content: "\f129"; }
+.flaticon-drugs-4:before { content: "\f12a"; }
+.flaticon-ear:before { content: "\f12b"; }
+.flaticon-earbuds:before { content: "\f12c"; }
+.flaticon-edema:before { content: "\f12d"; }
+.flaticon-electric-toothbrush:before { content: "\f12e"; }
+.flaticon-epidermis:before { content: "\f12f"; }
+.flaticon-extraction:before { content: "\f130"; }
+.flaticon-eye:before { content: "\f131"; }
+.flaticon-eye-1:before { content: "\f132"; }
+.flaticon-eye-drops:before { content: "\f133"; }
+.flaticon-eye-drops-1:before { content: "\f134"; }
+.flaticon-fat:before { content: "\f135"; }
+.flaticon-femur:before { content: "\f136"; }
+.flaticon-finger:before { content: "\f137"; }
+.flaticon-finger-1:before { content: "\f138"; }
+.flaticon-finger-2:before { content: "\f139"; }
+.flaticon-first-aid-kit:before { content: "\f13a"; }
+.flaticon-fit:before { content: "\f13b"; }
+.flaticon-gum:before { content: "\f13c"; }
+.flaticon-gum-1:before { content: "\f13d"; }
+.flaticon-hammer:before { content: "\f13e"; }
+.flaticon-heart:before { content: "\f13f"; }
+.flaticon-implants:before { content: "\f140"; }
+.flaticon-implants-1:before { content: "\f141"; }
+.flaticon-implants-2:before { content: "\f142"; }
+.flaticon-implants-3:before { content: "\f143"; }
+.flaticon-implants-4:before { content: "\f144"; }
+.flaticon-inhalator:before { content: "\f145"; }
+.flaticon-intestines:before { content: "\f146"; }
+.flaticon-iris:before { content: "\f147"; }
+.flaticon-kidney:before { content: "\f148"; }
+.flaticon-kidney-1:before { content: "\f149"; }
+.flaticon-knee:before { content: "\f14a"; }
+.flaticon-knee-1:before { content: "\f14b"; }
+.flaticon-kneecap:before { content: "\f14c"; }
+.flaticon-liver:before { content: "\f14d"; }
+.flaticon-lozenge:before { content: "\f14e"; }
+.flaticon-lungs:before { content: "\f14f"; }
+.flaticon-lungs-1:before { content: "\f150"; }
+.flaticon-lungs-2:before { content: "\f151"; }
+.flaticon-medical-records:before { content: "\f152"; }
+.flaticon-medicine:before { content: "\f153"; }
+.flaticon-medicine-1:before { content: "\f154"; }
+.flaticon-microbe:before { content: "\f155"; }
+.flaticon-mirror:before { content: "\f156"; }
+.flaticon-molar:before { content: "\f157"; }
+.flaticon-molar-1:before { content: "\f158"; }
+.flaticon-molar-2:before { content: "\f159"; }
+.flaticon-molar-3:before { content: "\f15a"; }
+.flaticon-molar-4:before { content: "\f15b"; }
+.flaticon-molar-5:before { content: "\f15c"; }
+.flaticon-molar-6:before { content: "\f15d"; }
+.flaticon-molar-7:before { content: "\f15e"; }
+.flaticon-molar-8:before { content: "\f15f"; }
+.flaticon-molar-crown:before { content: "\f160"; }
+.flaticon-nose:before { content: "\f161"; }
+.flaticon-notepad:before { content: "\f162"; }
+.flaticon-ointment:before { content: "\f163"; }
+.flaticon-ointment-1:before { content: "\f164"; }
+.flaticon-optical:before { content: "\f165"; }
+.flaticon-otoscope:before { content: "\f166"; }
+.flaticon-pancreas:before { content: "\f167"; }
+.flaticon-penis:before { content: "\f168"; }
+.flaticon-perfusion:before { content: "\f169"; }
+.flaticon-periodontal-scaler:before { content: "\f16a"; }
+.flaticon-periodontal-scaler-1:before { content: "\f16b"; }
+.flaticon-periodontal-scaler-2:before { content: "\f16c"; }
+.flaticon-pill:before { content: "\f16d"; }
+.flaticon-pill-1:before { content: "\f16e"; }
+.flaticon-pills:before { content: "\f16f"; }
+.flaticon-pills-1:before { content: "\f170"; }
+.flaticon-pills-2:before { content: "\f171"; }
+.flaticon-pills-3:before { content: "\f172"; }
+.flaticon-pills-4:before { content: "\f173"; }
+.flaticon-plastered-foot:before { content: "\f174"; }
+.flaticon-plastered-foot-1:before { content: "\f175"; }
+.flaticon-premolar:before { content: "\f176"; }
+.flaticon-premolar-1:before { content: "\f177"; }
+.flaticon-premolar-2:before { content: "\f178"; }
+.flaticon-records:before { content: "\f179"; }
+.flaticon-records-1:before { content: "\f17a"; }
+.flaticon-records-2:before { content: "\f17b"; }
+.flaticon-ribbon:before { content: "\f17c"; }
+.flaticon-scalpel:before { content: "\f17d"; }
+.flaticon-scissors:before { content: "\f17e"; }
+.flaticon-skeleton:before { content: "\f17f"; }
+.flaticon-skull:before { content: "\f180"; }
+.flaticon-skull-1:before { content: "\f181"; }
+.flaticon-spinal-column:before { content: "\f182"; }
+.flaticon-stethoscope:before { content: "\f183"; }
+.flaticon-stomach:before { content: "\f184"; }
+.flaticon-stomach-1:before { content: "\f185"; }
+.flaticon-syringe:before { content: "\f186"; }
+.flaticon-syringe-1:before { content: "\f187"; }
+.flaticon-syringe-2:before { content: "\f188"; }
+.flaticon-syringe-3:before { content: "\f189"; }
+.flaticon-syringe-4:before { content: "\f18a"; }
+.flaticon-tablets:before { content: "\f18b"; }
+.flaticon-teeth:before { content: "\f18c"; }
+.flaticon-teeth-1:before { content: "\f18d"; }
+.flaticon-teeth-10:before { content: "\f18e"; }
+.flaticon-teeth-2:before { content: "\f18f"; }
+.flaticon-teeth-3:before { content: "\f190"; }
+.flaticon-teeth-4:before { content: "\f191"; }
+.flaticon-teeth-5:before { content: "\f192"; }
+.flaticon-teeth-6:before { content: "\f193"; }
+.flaticon-teeth-7:before { content: "\f194"; }
+.flaticon-teeth-8:before { content: "\f195"; }
+.flaticon-teeth-9:before { content: "\f196"; }
+.flaticon-thermometer:before { content: "\f197"; }
+.flaticon-thermometer-1:before { content: "\f198"; }
+.flaticon-thin:before { content: "\f199"; }
+.flaticon-tonsils-tester:before { content: "\f19a"; }
+.flaticon-tooth:before { content: "\f19b"; }
+.flaticon-tooth-1:before { content: "\f19c"; }
+.flaticon-tooth-2:before { content: "\f19d"; }
+.flaticon-tooth-brush:before { content: "\f19e"; }
+.flaticon-tooth-pliers:before { content: "\f19f"; }
+.flaticon-tweezers:before { content: "\f1a0"; }
+.flaticon-tweezers-1:before { content: "\f1a1"; }
+.flaticon-uterus:before { content: "\f1a2"; }
+.flaticon-vagina:before { content: "\f1a3"; }
+.flaticon-vagina-1:before { content: "\f1a4"; }
+.flaticon-virus:before { content: "\f1a5"; }
+.flaticon-wheelchair:before { content: "\f1a6"; }
+.flaticon-x-ray:before { content: "\f1a7"; }
+.flaticon-x-ray-1:before { content: "\f1a8"; }
+.flaticon-x-ray-2:before { content: "\f1a9"; }
+    
+    $font-Flaticon-anesthesia: "\f100";
+    $font-Flaticon-antibiotic: "\f101";
+    $font-Flaticon-arm: "\f102";
+    $font-Flaticon-arm-1: "\f103";
+    $font-Flaticon-articulation: "\f104";
+    $font-Flaticon-bacteria: "\f105";
+    $font-Flaticon-band-aid: "\f106";
+    $font-Flaticon-blood-sample: "\f107";
+    $font-Flaticon-blood-sample-1: "\f108";
+    $font-Flaticon-blood-transfusion: "\f109";
+    $font-Flaticon-bone: "\f10a";
+    $font-Flaticon-braces: "\f10b";
+    $font-Flaticon-braces-1: "\f10c";
+    $font-Flaticon-braces-2: "\f10d";
+    $font-Flaticon-brain: "\f10e";
+    $font-Flaticon-brain-1: "\f10f";
+    $font-Flaticon-brain-2: "\f110";
+    $font-Flaticon-brain-3: "\f111";
+    $font-Flaticon-breast: "\f112";
+    $font-Flaticon-breast-1: "\f113";
+    $font-Flaticon-breast-2: "\f114";
+    $font-Flaticon-breast-3: "\f115";
+    $font-Flaticon-breast-4: "\f116";
+    $font-Flaticon-breast-implant: "\f117";
+    $font-Flaticon-canine: "\f118";
+    $font-Flaticon-canine-1: "\f119";
+    $font-Flaticon-canine-2: "\f11a";
+    $font-Flaticon-canine-3: "\f11b";
+    $font-Flaticon-cardiogram: "\f11c";
+    $font-Flaticon-cardiogram-1: "\f11d";
+    $font-Flaticon-cardiogram-2: "\f11e";
+    $font-Flaticon-caries: "\f11f";
+    $font-Flaticon-caries-1: "\f120";
+    $font-Flaticon-crutches: "\f121";
+    $font-Flaticon-dental-drill: "\f122";
+    $font-Flaticon-dental-floss: "\f123";
+    $font-Flaticon-dna: "\f124";
+    $font-Flaticon-dropper: "\f125";
+    $font-Flaticon-drugs: "\f126";
+    $font-Flaticon-drugs-1: "\f127";
+    $font-Flaticon-drugs-2: "\f128";
+    $font-Flaticon-drugs-3: "\f129";
+    $font-Flaticon-drugs-4: "\f12a";
+    $font-Flaticon-ear: "\f12b";
+    $font-Flaticon-earbuds: "\f12c";
+    $font-Flaticon-edema: "\f12d";
+    $font-Flaticon-electric-toothbrush: "\f12e";
+    $font-Flaticon-epidermis: "\f12f";
+    $font-Flaticon-extraction: "\f130";
+    $font-Flaticon-eye: "\f131";
+    $font-Flaticon-eye-1: "\f132";
+    $font-Flaticon-eye-drops: "\f133";
+    $font-Flaticon-eye-drops-1: "\f134";
+    $font-Flaticon-fat: "\f135";
+    $font-Flaticon-femur: "\f136";
+    $font-Flaticon-finger: "\f137";
+    $font-Flaticon-finger-1: "\f138";
+    $font-Flaticon-finger-2: "\f139";
+    $font-Flaticon-first-aid-kit: "\f13a";
+    $font-Flaticon-fit: "\f13b";
+    $font-Flaticon-gum: "\f13c";
+    $font-Flaticon-gum-1: "\f13d";
+    $font-Flaticon-hammer: "\f13e";
+    $font-Flaticon-heart: "\f13f";
+    $font-Flaticon-implants: "\f140";
+    $font-Flaticon-implants-1: "\f141";
+    $font-Flaticon-implants-2: "\f142";
+    $font-Flaticon-implants-3: "\f143";
+    $font-Flaticon-implants-4: "\f144";
+    $font-Flaticon-inhalator: "\f145";
+    $font-Flaticon-intestines: "\f146";
+    $font-Flaticon-iris: "\f147";
+    $font-Flaticon-kidney: "\f148";
+    $font-Flaticon-kidney-1: "\f149";
+    $font-Flaticon-knee: "\f14a";
+    $font-Flaticon-knee-1: "\f14b";
+    $font-Flaticon-kneecap: "\f14c";
+    $font-Flaticon-liver: "\f14d";
+    $font-Flaticon-lozenge: "\f14e";
+    $font-Flaticon-lungs: "\f14f";
+    $font-Flaticon-lungs-1: "\f150";
+    $font-Flaticon-lungs-2: "\f151";
+    $font-Flaticon-medical-records: "\f152";
+    $font-Flaticon-medicine: "\f153";
+    $font-Flaticon-medicine-1: "\f154";
+    $font-Flaticon-microbe: "\f155";
+    $font-Flaticon-mirror: "\f156";
+    $font-Flaticon-molar: "\f157";
+    $font-Flaticon-molar-1: "\f158";
+    $font-Flaticon-molar-2: "\f159";
+    $font-Flaticon-molar-3: "\f15a";
+    $font-Flaticon-molar-4: "\f15b";
+    $font-Flaticon-molar-5: "\f15c";
+    $font-Flaticon-molar-6: "\f15d";
+    $font-Flaticon-molar-7: "\f15e";
+    $font-Flaticon-molar-8: "\f15f";
+    $font-Flaticon-molar-crown: "\f160";
+    $font-Flaticon-nose: "\f161";
+    $font-Flaticon-notepad: "\f162";
+    $font-Flaticon-ointment: "\f163";
+    $font-Flaticon-ointment-1: "\f164";
+    $font-Flaticon-optical: "\f165";
+    $font-Flaticon-otoscope: "\f166";
+    $font-Flaticon-pancreas: "\f167";
+    $font-Flaticon-penis: "\f168";
+    $font-Flaticon-perfusion: "\f169";
+    $font-Flaticon-periodontal-scaler: "\f16a";
+    $font-Flaticon-periodontal-scaler-1: "\f16b";
+    $font-Flaticon-periodontal-scaler-2: "\f16c";
+    $font-Flaticon-pill: "\f16d";
+    $font-Flaticon-pill-1: "\f16e";
+    $font-Flaticon-pills: "\f16f";
+    $font-Flaticon-pills-1: "\f170";
+    $font-Flaticon-pills-2: "\f171";
+    $font-Flaticon-pills-3: "\f172";
+    $font-Flaticon-pills-4: "\f173";
+    $font-Flaticon-plastered-foot: "\f174";
+    $font-Flaticon-plastered-foot-1: "\f175";
+    $font-Flaticon-premolar: "\f176";
+    $font-Flaticon-premolar-1: "\f177";
+    $font-Flaticon-premolar-2: "\f178";
+    $font-Flaticon-records: "\f179";
+    $font-Flaticon-records-1: "\f17a";
+    $font-Flaticon-records-2: "\f17b";
+    $font-Flaticon-ribbon: "\f17c";
+    $font-Flaticon-scalpel: "\f17d";
+    $font-Flaticon-scissors: "\f17e";
+    $font-Flaticon-skeleton: "\f17f";
+    $font-Flaticon-skull: "\f180";
+    $font-Flaticon-skull-1: "\f181";
+    $font-Flaticon-spinal-column: "\f182";
+    $font-Flaticon-stethoscope: "\f183";
+    $font-Flaticon-stomach: "\f184";
+    $font-Flaticon-stomach-1: "\f185";
+    $font-Flaticon-syringe: "\f186";
+    $font-Flaticon-syringe-1: "\f187";
+    $font-Flaticon-syringe-2: "\f188";
+    $font-Flaticon-syringe-3: "\f189";
+    $font-Flaticon-syringe-4: "\f18a";
+    $font-Flaticon-tablets: "\f18b";
+    $font-Flaticon-teeth: "\f18c";
+    $font-Flaticon-teeth-1: "\f18d";
+    $font-Flaticon-teeth-10: "\f18e";
+    $font-Flaticon-teeth-2: "\f18f";
+    $font-Flaticon-teeth-3: "\f190";
+    $font-Flaticon-teeth-4: "\f191";
+    $font-Flaticon-teeth-5: "\f192";
+    $font-Flaticon-teeth-6: "\f193";
+    $font-Flaticon-teeth-7: "\f194";
+    $font-Flaticon-teeth-8: "\f195";
+    $font-Flaticon-teeth-9: "\f196";
+    $font-Flaticon-thermometer: "\f197";
+    $font-Flaticon-thermometer-1: "\f198";
+    $font-Flaticon-thin: "\f199";
+    $font-Flaticon-tonsils-tester: "\f19a";
+    $font-Flaticon-tooth: "\f19b";
+    $font-Flaticon-tooth-1: "\f19c";
+    $font-Flaticon-tooth-2: "\f19d";
+    $font-Flaticon-tooth-brush: "\f19e";
+    $font-Flaticon-tooth-pliers: "\f19f";
+    $font-Flaticon-tweezers: "\f1a0";
+    $font-Flaticon-tweezers-1: "\f1a1";
+    $font-Flaticon-uterus: "\f1a2";
+    $font-Flaticon-vagina: "\f1a3";
+    $font-Flaticon-vagina-1: "\f1a4";
+    $font-Flaticon-virus: "\f1a5";
+    $font-Flaticon-wheelchair: "\f1a6";
+    $font-Flaticon-x-ray: "\f1a7";
+    $font-Flaticon-x-ray-1: "\f1a8";
+    $font-Flaticon-x-ray-2: "\f1a9";
