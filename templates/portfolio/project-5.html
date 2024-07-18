@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+
+{% block container %}
+<div class="col-md-8 col-md-offset-2 portfolio-content text-center">
+    <h1 class="blog-title">Telegram Bot for Orientirungskurs exam</h1>
+    <figure class="top_45 bottom_45">
+        <img src="/static/images/portfolio-content/image-5.png" alt=""
+             style="width: 100%; max-width: 700px; display: block; margin: auto;">
+    </figure>
+    <div class="section-title bottom_30"><span></span>
+        <h2>About Project</h2></div>
+    <p class="font-16">Telegram bot helps Ukrainians at integration courses in Germany better prepare for the “Life in Germany” exam.
+        The bot accepts a number from 1 to 300 as input and sends the original TELS test with a hidden answer.<br><br>
+        The code is written according to the OOP paradigm. I used the telebot library here and created the database
+        using SQLite. I also previously wrote a parser to extract data about answers and questions from a PDF file.
+    </p>
+    <button class="site-btn top_15 bottom_30 user-select-none"><a class="black-link"
+                                                                  href="https://github.com/haldaniko/KlettOrientierungskursTest">Github
+        cource</a></button>
+</div>
+{% endblock %}
