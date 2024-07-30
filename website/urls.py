@@ -5,4 +5,6 @@ app_name = "website"
 
 urlpatterns = [
     path('index/', index, name='index'),
+    path('', index, name='index'),
+
 ]
