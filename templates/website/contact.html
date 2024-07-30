@@ -1,0 +1,64 @@
+{% extends 'website/base.html' %}
+
+
+{% block container %}
+  <div id="contact">
+    <div class="row">
+      <section class="contact-form col-md-6 padding_30 padbot_45">
+        <div class="section-title top_15 bottom_30">
+          <span></span>
+          <h2>Contact Form</h2>
+        </div>
+        <form class="site-form" method="post" action="#">
+          <div class="row">
+            <div class="col-md-6">
+              <input class="site-input" placeholder="Name" name="name">
+            </div>
+            <div class="col-md-6">
+              <input class="site-input" placeholder="E-mail" name="email">
+            </div>
+            <div class="col-md-12">
+              <textarea class="site-area" placeholder="Message" name="message"></textarea>
+            </div>
+            <div class="col-md-12 top_15 bottom_30">
+              <button class="site-btn" type="submit">Submit</button>
+            </div>
+          </div>
+        </form>
+      </section>
+      <section class="contact-info col-md-6 padding_30 padbot_45">
+        <div class="section-title top_15 bottom_30"><span></span>
+          <h2>Contact Informations</h2></div>
+        <ul>
+          <li><span>Location:</span> 47805 Krefeld, Germany</li>
+          <li><span>Phone (DE):</span> +49-176-271-69632</li>
+          <li><span>Phone (UA):</span> +38-097-296-4484</li>
+          <li><span>E-mail:</span> haldaniko@gmail.com</li>
+          <li><span>Telegram:</span><a href="https://t.me/Haldwork"> @Haldwork</a></li>
+          <li>
+            <div class="social-icons top_15">
+              <a target="_blank" class="fb"
+                 href="https://www.facebook.com/haldaniko/"><i class="fa fa-facebook"
+                                                               aria-hidden="true"></i></a>
+              <a target="_blank" class="telegram" href="https://t.me/Haldwork"><i
+                  class="fa fa-telegram" aria-hidden="true"></i></a>
+              <a target="_blank" class="github" href="https://github.com/haldaniko"><i
+                  class="fa fa-github" aria-hidden="true"></i></a>
+              <a target="_blank" class="linkedin"
+                 href="https://www.linkedin.com/in/haldaniko/"><i
+                  class="fa fa-linkedin" aria-hidden="true"></i></a>
+            </div>
+          </li>
+        </ul>
+      </section>
+      <section class="contact-map col-md-12 top_15 bottom_15">
+        <div class="section-title bottom_30"><span></span>
+          <h2>Contact Map.</h2></div>
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d159496.32570284107!2d6.42692840118682!3d51.34551844539271!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b8baab475e5359%3A0x2fa2b9edc6d18857!2sKrefeld!5e0!3m2!1sde!2sde!4v1699369371848!5m2!1sde!2sde"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </section>
+    </div>
+  </div>
+{% endblock %}
