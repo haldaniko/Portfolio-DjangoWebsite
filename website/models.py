@@ -1,4 +1,22 @@
+import os
+import uuid
+
 from django.db import models
+from django.utils.text import slugify
+
+
+def certif_file_path(instance, filename):
+    _, extension = os.path.splitext(filename)
+    filename = f"{slugify(instance.name)}-{uuid.uuid4()}{extension}"
+
+    return os.path.join(f"uploads/certificates/", filename)
+
+
+def portfolio_file_path(instance, filename):
+    _, extension = os.path.splitext(filename)
+    filename = f"{slugify(instance.name)}-{uuid.uuid4()}{extension}"
+
+    return os.path.join(f"uploads/portfolio/", filename)
 
 
 class Skill(models.Model):
@@ -44,8 +62,8 @@ class StudyExperience(models.Model):
 class PortfolioExample(models.Model):
     name = models.CharField(max_length=255)
     description_small = models.CharField(max_length=255)
-    description_photo = models.ImageField()
-    project_photo = models.ImageField()
+    description_photo = models.ImageField(upload_to=portfolio_file_path)
+    project_photo = models.ImageField(upload_to=portfolio_file_path)
     about = models.TextField()
     github_source = models.CharField(max_length=255)
 
@@ -56,7 +74,7 @@ class PortfolioExample(models.Model):
 class Certificate(models.Model):
     name = models.CharField(max_length=255)
     credential_link = models.CharField(max_length=255)
-    photo = models.ImageField()
+    photo = models.ImageField(upload_to=certif_file_path)
 
     def __str__(self):
         return self.name
