@@ -1,6 +1,7 @@
 import os
 import uuid
 
+from django.core.validators import MinValueValidator, MaxValueValidator
 from django.db import models
 from django.utils.text import slugify
 
@@ -21,6 +22,9 @@ def portfolio_file_path(instance, filename):
 
 class Skill(models.Model):
     name = models.CharField(max_length=255, unique=True)
+    percentage = models.IntegerField(
+        validators=[MinValueValidator(10), MaxValueValidator(100)]
+    )
 
     def __str__(self):
         return self.name
