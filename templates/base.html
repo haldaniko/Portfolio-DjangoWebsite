@@ -10,7 +10,6 @@
   <meta name="keywords" content="personal, vcard, portfolio">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="icon" href="/static/images/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
   <link rel="stylesheet" href="{% static 'css/reset.css' %}">
   <link rel="stylesheet" href="{% static 'cubeportfolio/css/cubeportfolio.min.css' %}">
@@ -20,9 +19,8 @@
   <link rel="stylesheet" href="{% static 'css/colors/yellow.css' %}">
   <link rel="stylesheet" href="{% static 'icon-fonts/font-awesome-4.7.0/css/font-awesome.min.css' %}">
   <link rel="stylesheet" href="{% static 'icon-fonts/web-design/flaticon.css' %}">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900">
-
-  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  {#  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900">#}
+  {#  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>#}
 </head>
 
 
@@ -36,8 +34,11 @@
 
       {% include 'includes/navigation.html' %}
 
-      {% block container %} {% endblock %}
-
+      <div class="col-md-12">
+        <div id="content" class="panel-container">
+          {% block container %} {% endblock %}
+        </div>
+      </div>
       {% include 'includes/footer.html' %}
 
     </div>
