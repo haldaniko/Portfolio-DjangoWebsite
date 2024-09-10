@@ -1,15 +1,31 @@
 from django.shortcuts import render
+from django.views import generic
+
+from website.models import WorkExperience, StudyExperience, PortfolioExample, Certificate
 
 
 def index(request):
-    # num_topics = Topic.objects.count()
-    # num_redactors = Redactor.objects.count()
-    # num_newspapers = Newspaper.objects.count()
-    #
-    # context = {
-    #     "num_topics": 1,
-    #     "num_redactors": 2,
-    #     "num_newspapers": 3,
-    # }
+    return render(request, "website/index.html")
 
-    return render(request, "base.html")
+
+def resume(request):
+    context = {
+        "work_expirience": WorkExperience.objects.all,
+        "study_redactors": StudyExperience.objects.all,
+    }
+
+    return render(request, "website/resume.html", context=context)
+
+
+def contact(request):
+    return render(request, "website/contact.html")
+
+
+class PortfolioExampleListView(generic.ListView):
+    model = PortfolioExample
+    template_name = "website/portfolio.html"
+
+
+class CertificateListView(generic.ListView):
+    model = Certificate
+    template_name = "website/certificates.html"
