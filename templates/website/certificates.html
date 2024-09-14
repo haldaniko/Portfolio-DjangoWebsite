@@ -2,40 +2,44 @@
 
 
 {% block container %}
-  <div id="certificates" class="row bottom_45">
-    <section class="col-md-12">
-      <div class="col-md-12 content-header bottom_15">
-        <div class="section-title top_30 bottom_30"><span></span>
-          <h2>Certificates</h2></div>
-        <div class="filters-container certificates-filter">
-          <div data-filter="*"
-               class="cbp-filter-item cbp-filter-item-active user-select-none">All
+  <div id="content" class="panel-container">
+
+    <div id="certificates" class="row bottom_45">
+      <section class="col-md-12">
+        <div class="col-md-12 content-header bottom_15">
+          <div class="section-title top_30 bottom_30"><span></span>
+            <h2 class="user-select-none">Certificates</h2></div>
+            <div class="filters-container certificates-filter user-select-none">
+            <div data-filter="*" class="cbp-filter-item user-select-none">All</div>
+            <div data-filter=".linux" class="cbp-filter-item user-select-none">Linux</div>
+            <div data-filter=".python" class="cbp-filter-item user-select-none">Python</div>
+            <div data-filter=".sql" class="cbp-filter-item user-select-none">SQL</div>
+            <div data-filter=".web" class="cbp-filter-item user-select-none">Web</div>
+            <div data-filter=".language" class="cbp-filter-item user-select-none">Language</div>
           </div>
-          <div data-filter=".linux" class="cbp-filter-item user-select-none">Linux</div>
-          <div data-filter=".python" class="cbp-filter-item user-select-none">Python</div>
-          <div data-filter=".sql" class="cbp-filter-item user-select-none">SQL</div>
-          <div data-filter=".web" class="cbp-filter-item user-select-none">Web</div>
-          <div data-filter=".language" class="cbp-filter-item user-select-none">Language</div>
         </div>
-      </div>
-      <div class="grid-container top_60 certificates">
-        <div class="cbp-item linux">
-          <a href="/images/certificates/9.png" class="cbp-lightbox">
-            <figure>
-              <div class="icon">
-                <i class="fa fa-picture-o" aria-hidden="true"></i>
-              </div>
-              <img src="/images/certificates/9.png" alt="">
-            </figure>
-          </a>
-          <figcaption>
-            <span class="title">Introduction to Linux</span><br/>
-            <a target="_blank"
-               href="https://stepik.org/certificate/c5b4d1568644024a34ae7fa4545197b134f958c8.pdf?language=en"
-               class="external-link show-credential-button">Show credential</a>
-          </figcaption>
+        <div class="grid-container top_60 certificates">
+          {% for certificate in certificate_list %}
+            <div class="cbp-item linux">
+              <a href="{{ certificate.photo.url }}" class="cbp-lightbox">
+                <figure>
+                  <div class="icon">
+                    <i class="fa fa-picture-o" aria-hidden="true"></i>
+                  </div>
+                  <img src="{{ certificate.photo.url }}" alt="">
+                </figure>
+              </a>
+              <figcaption>
+                <span class="title">Introduction to Linux</span><br/>
+                <a target="_blank"
+                   href="{{ certificate.credential_link }}"
+                   class="external-link show-credential-button">Show credential</a>
+              </figcaption>
+            </div>
+          {% endfor %}
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
   </div>
+
 {% endblock %}

@@ -1,117 +1,39 @@
 {% extends 'base.html' %}
 
 {% block container %}
-  <div id="portfolio" class="row bottom_45">
-    <section class="col-md-12">
-      <div class="col-md-12 content-header bottom_15">
-        <div class="section-title top_30 bottom_30"><span></span>
-          <h2>Portfolio</h2></div>
-        <div class="filters-container portfolio-filter">
-          <!-- '*' means shows all item elements -->
-          <div data-filter="*" class="user-select-none cbp-filter-item cbp-filter-item-active">All</div>
-          <div data-filter=".websites" class="user-select-none cbp-filter-item">Web sites</div>
-          <div data-filter=".chatbots" class="user-select-none cbp-filter-item">Chat bots</div>
-          <div data-filter=".scripts" class="user-select-none cbp-filter-item">Scripts</div>
-        </div>
-      </div>
-      <div class="grid-container top_60 portfolio">
-        <!-- a work 1 -->
-        <div class="cbp-item websites">
-          <a href="/portfolio/project-1">
-            <figure>
-              <div class="icon">
-                <i class="fa fa-clone" aria-hidden="true"></i>
-              </div>
-              <img src="/images/portfolio-content/image-1.png" alt="">
-              <figcaption>
-                <span class="title">Travel agency Website</span><br/>
-                <span class="info">Several pages with descriptions of tours, hotels and their ratings.</span>
-              </figcaption>
-            </figure>
-          </a>
-        </div>
+  <div id="content" class="panel-container">
 
-        <!-- a work 2 -->
-        <div class="cbp-item chatbots">
-          <a href="/portfolio/project-2">
-            <figure>
-              <div class="icon">
-                <i class="fa fa-clone" aria-hidden="true"></i>
-              </div>
-              <img src="/images/portfolio-content/tg-bot.png" alt="">
-              <figcaption>
-                <span class="title">Telegram bot QR codes</span><br/>
-                <span class="info">Helps in creating QR codes and decoding them</span>
-              </figcaption>
-            </figure>
-          </a>
+    <div id="portfolio" class="row bottom_45">
+      <section class="col-md-12">
+        <div class="col-md-12 content-header bottom_15">
+          <div class="section-title top_30 bottom_30"><span></span>
+            <h2>Portfolio</h2></div>
+          <div class="filters-container portfolio-filter">
+            <div data-filter="*" class="user-select-none cbp-filter-item cbp-filter-item-active">All</div>
+            <div data-filter=".websites" class="user-select-none cbp-filter-item">Web sites</div>
+            <div data-filter=".chatbots" class="user-select-none cbp-filter-item">Chat bots</div>
+            <div data-filter=".scripts" class="user-select-none cbp-filter-item">Scripts</div>
+          </div>
         </div>
-
-        <!-- a work 3 -->
-        <div class="cbp-item scripts">
-          <a href="/portfolio/project-3">
-            <figure>
-              <div class="icon">
-                <i class="fa fa-clone" aria-hidden="true"></i>
-              </div>
-              <img src="/images/portfolio-content/script.png" alt="">
-              <figcaption>
-                <span class="title">Telegraph galeries script</span><br/>
-                <span class="info">Helps create picture galleries on the telegra.ph service.</span>
-              </figcaption>
-            </figure>
-          </a>
+        <div class="grid-container top_60 portfolio">
+          {% for portfolioexample in portfolioexample_list %}
+            <div class="cbp-item websites">
+              <a href="{% url 'website:portfolio_detail' pk=portfolioexample.pk %}">
+                <figure>
+                  <div class="icon">
+                    <i class="fa fa-clone" aria-hidden="true"></i>
+                  </div>
+                  <img src="{{ portfolioexample.description_photo.url }}" alt="">
+                  <figcaption>
+                    <span class="title">{{ portfolioexample.name }}</span><br/>
+                    <span class="info">{{ portfolioexample.description_small }}</span>
+                  </figcaption>
+                </figure>
+              </a>
+            </div>
+          {% endfor %}
         </div>
-
-        <!-- a work 4 -->
-        <div class="cbp-item websites">
-          <a href="/portfolio/project-4">
-            <figure>
-              <div class="icon">
-                <i class="fa fa-clone" aria-hidden="true"></i>
-              </div>
-              <img src="/images/portfolio-content/image-4.png" alt="">
-              <figcaption>
-                <span class="title">Tutor Choice Website</span><br/>
-                <span class="info">A site that allows user to choose an English tutor and study online.</span>
-              </figcaption>
-            </figure>
-          </a>
-        </div>
-
-        <!-- a work 5 -->
-        <div class="cbp-item chatbots">
-          <a href="/portfolio/project-5">
-            <figure>
-              <div class="icon">
-                <i class="fa fa-clone" aria-hidden="true"></i>
-              </div>
-              <img src="/images/portfolio-content/tg-bot.png" alt="">
-              <figcaption>
-                <span class="title">Orientirungskurs Bot</span><br/>
-                <span class="info">Bot for help students of the course "Life in Germany"</span>
-              </figcaption>
-            </figure>
-          </a>
-        </div>
-
-        <!-- a work 6 -->
-        <div class="cbp-item websites">
-          <a href="/portfolio/project-6">
-            <figure>
-              <div class="icon">
-                <i class="fa fa-clone" aria-hidden="true"></i>
-              </div>
-              <img src="/images/portfolio-content/image-6.png" alt="">
-              <figcaption>
-                <span class="title">Portfolio Website</span><br/>
-                <span class="info">Personal website representing me as a professional</span>
-              </figcaption>
-            </figure>
-          </a>
-        </div>
-
-      </div>
-    </section>
+      </section>
+    </div>
   </div>
 {% endblock %}
