@@ -26,6 +26,11 @@ class PortfolioExampleListView(generic.ListView):
     template_name = "website/portfolio.html"
 
 
+class PortfolioExampleDetailView(generic.DetailView):
+    model = PortfolioExample
+    template_name = "website/project.html"
+
+
 class CertificateListView(generic.ListView):
     model = Certificate
     template_name = "website/certificates.html"
