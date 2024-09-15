@@ -13,79 +13,51 @@
               <ul class="timeline col-md-12 top_30">
                 <li><i class="fa fa-suitcase" aria-hidden="true"></i>
                   <h2 class="timeline-title">Working History</h2></li>
-                <li><h3 class="line-title">Trainee - <a target="_blank" href="https://acadon.net/">Acadon AG</a></h3>
-                  <span>Feb 2024 - Mar 2024<br>Krefeld, Germany</span>
-                  <p class="little-text">Internship at a company specializing in accounting systems.
-                    Gained hands-on experience with Microsoft AL and Git.</p>
-                </li>
-                <li><h3 class="line-title">Service Crew - <a target="_blank"
-                                                             href="https://www.mcdonalds.com/de/de-de.html">
-                  McDonald's</a></h3>
-                  <span>Oct 2023 - Feb 2024<br>Krefeld, Germany</span>
-                  <p class="little-text">Responsibilities include greeting customers
-                    with a smile, taking orders, preparing and delivering food,
-                    maintaining cleanliness, and working as part of a team.</p>
-                </li>
-                <li><h3 class="line-title">Secretary - LLC "Artmedia"</h3>
-                  <span>Feb 2021 - Feb 2022<br>Kyiv, Ukraine</span>
-                  <p class="little-text">Managing financial statements and tax
-                    returns, preparing working estimates, and handling all necessary
-                    documentation for the video production team servicing Ukrainian
-                    TV channels.
-                  </p>
-                </li>
-                <li><h3 class="line-title">Live Sound Engineer - Freelance</h3>
-                  <span>Dec 2017 - Feb 2021<br>Kyiv, Ukraine</span>
-                  <p class="little-text">Providing musical accompaniment for various
-                    occasions, including holidays, birthdays, weddings, and
-                    corporate events.
-                  </p>
-                </li>
+                {% for work_place in work_expirience reversed %}
+                  <li>
+                    <h3 class="line-title">
+                      {{ work_place.position_name }} -
+                      {% if work_place.company_link %}
+                        <a target="_blank" href="{{ work_place.company_link }}">
+                          {{ work_place.company_name }}
+                        </a>
+                      {% else %}
+                        {{ work_place.company_name }}
+                      {% endif %}
+                    </h3>
+                    <span>
+                      {{ work_place.start_date|date:"M Y" }} - {{ work_place.end_date|date:"M Y" }}<br>
+                      {{ work_place.location }}
+                    </span>
+                    <p class="little-text">{{ work_place.description }}</p>
+                  </li>
+                {% endfor %}
               </ul>
             </div>
             <div class="education-history col-md-6 padding_15 padbot_30">
               <ul class="timeline col-md-12 top_30">
                 <li><i class="fa fa-graduation-cap" aria-hidden="true"></i>
                   <h2 class="timeline-title">Education History</h2></li>
-                <li>
-                  <h3 class="line-title">
-                    <a target="_blank" href="https://mate.academy/en">
-                      Mate Academy</a>
-                  </h3>
-                  <span>Mar 2024 - Present</span>
-                  <p class="little-text">
-                    Python Programming course<br></p>
-                </li>
-                <li>
-                  <h3 class="line-title">
-                    <a target="_blank" href="https://www.lernart-krefeld.de/berufssprachkurse-deuf%C3%B6/">
-                      LernArt GmbH
-                    </a>
-                  </h3>
-                  <span>Jun 2023 - Dec 2023</span>
-                  <p class="little-text">
-                    German language course<br>
-                    Grade: Certified B2</p>
-                </li>
-                <li><h3 class="line-title"><a target="_blank" href="https://www.nestor-bildung.de/">
-                  Nestor Bildungsinstitut GmbH</a></h3>
-                  <span>Oct 2022 - Mar 2023</span>
-                  <p class="little-text">
-                    German language course<br>
-                    Grade: Certified B1</p>
-                </li>
-                <!-- a school -->
-                <li><h3 class="line-title"><a target="_blank" href="https://chubynsky.best/ua/akademiya-sogodni.html">
-                  Pavlo Chubynsky Academy of Arts</a></h3>
-                  <span>Sep 2017 - Jun 2019</span>
-                  <p class="little-text">Secondary vocational education,
-                    Music Pedagogy</p>
-                </li>
-                <!-- a school -->
-                <li><h3 class="line-title">Irpin Lyceum №2</h3>
-                  <span>Sep 2008 - May 2017</span>
-                  <p class="little-text">Secondary education</p>
-                </li>
+                {% for study_place in study_expirience reversed %}
+                  <li>
+                    <h3 class="line-title">
+                      {% if study_place.school_link %}
+                        <a target="_blank" href="{{ study_place.school_link }}">
+                          {{ study_place.school_name }}
+                        </a>
+                      {% else %}
+                        {{ study_place.school_name }}
+                      {% endif %}
+                    </h3>
+                    <span>
+                      {{ study_place.start_date|date:"M Y" }} - {{ study_place.end_date|date:"M Y" }}<br>
+                      {{ study_place.location }}
+                    </span>
+                    <p class="little-text">
+                      {{ study_place.descritpion }}e<br>
+                    </p>
+                  </li>
+                {% endfor %}
               </ul>
             </div>
           </div>
