@@ -11,7 +11,7 @@ def index(request):
 def resume(request):
     context = {
         "work_expirience": WorkExperience.objects.all,
-        "study_redactors": StudyExperience.objects.all,
+        "study_expirience": StudyExperience.objects.all,
     }
 
     return render(request, "website/resume.html", context=context)
