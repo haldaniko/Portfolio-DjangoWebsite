@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block container %}
+  <div id="content" class="panel-container">
+
+    <div id="portfolio" class="row bottom_45">
+      <section class="col-md-12">
+        <div class="col-md-12 content-header bottom_15">
+          <div class="section-title top_30 bottom_30"><span></span>
+            <h2>Portfolio</h2></div>
+          <div class="filters-container portfolio-filter">
+            <div data-filter="*" class="user-select-none cbp-filter-item cbp-filter-item-active">All</div>
+            <div data-filter=".websites" class="user-select-none cbp-filter-item">Web sites</div>
+            <div data-filter=".chatbots" class="user-select-none cbp-filter-item">Chat bots</div>
+            <div data-filter=".scripts" class="user-select-none cbp-filter-item">Scripts</div>
+          </div>
+        </div>
+        <div class="grid-container top_60 portfolio">
+          {% for portfolioexample in portfolioexample_list %}
+            <div class="cbp-item websites">
+              <a href="{% url 'website:portfolio_detail' pk=portfolioexample.pk %}">
+                <figure>
+                  <div class="icon">
+                    <i class="fa fa-clone" aria-hidden="true"></i>
+                  </div>
+                  <img src="{{ portfolioexample.description_photo.url }}" alt="">
+                  <figcaption>
+                    <span class="title">{{ portfolioexample.name }}</span><br/>
+                    <span class="info">{{ portfolioexample.description_small }}</span>
+                  </figcaption>
+                </figure>
+              </a>
+            </div>
+          {% endfor %}
+        </div>
+      </section>
+    </div>
+  </div>
+{% endblock %}

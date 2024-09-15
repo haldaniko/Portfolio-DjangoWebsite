@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+
+{% block container %}
+  <div id="content" class="panel-container">
+
+    <div id="resume">
+      <div class="row">
+        <section class="education">
+          <div class="section-title top_30"><span></span>
+            <h2>Resume</h2></div>
+          <div class="row">
+            <div class="working-history col-md-6 padding_15 padbot_30">
+              <ul class="timeline col-md-12 top_30">
+                <li><i class="fa fa-suitcase" aria-hidden="true"></i>
+                  <h2 class="timeline-title">Working History</h2></li>
+                {% for work_place in work_expirience reversed %}
+                  <li>
+                    <h3 class="line-title">
+                      {{ work_place.position_name }} -
+                      {% if work_place.company_link %}
+                        <a target="_blank" href="{{ work_place.company_link }}">
+                          {{ work_place.company_name }}
+                        </a>
+                      {% else %}
+                        {{ work_place.company_name }}
+                      {% endif %}
+                    </h3>
+                    <span>
+                      {{ work_place.start_date|date:"M Y" }} - {{ work_place.end_date|date:"M Y" }}<br>
+                      {{ work_place.location }}
+                    </span>
+                    <p class="little-text">{{ work_place.description }}</p>
+                  </li>
+                {% endfor %}
+              </ul>
+            </div>
+            <div class="education-history col-md-6 padding_15 padbot_30">
+              <ul class="timeline col-md-12 top_30">
+                <li><i class="fa fa-graduation-cap" aria-hidden="true"></i>
+                  <h2 class="timeline-title">Education History</h2></li>
+                {% for study_place in study_expirience reversed %}
+                  <li>
+                    <h3 class="line-title">
+                      {% if study_place.school_link %}
+                        <a target="_blank" href="{{ study_place.school_link }}">
+                          {{ study_place.school_name }}
+                        </a>
+                      {% else %}
+                        {{ study_place.school_name }}
+                      {% endif %}
+                    </h3>
+                    <span>
+                      {{ study_place.start_date|date:"M Y" }} - {{ study_place.end_date|date:"M Y" }}<br>
+                      {{ study_place.location }}
+                    </span>
+                    <p class="little-text">
+                      {{ study_place.descritpion }}e<br>
+                    </p>
+                  </li>
+                {% endfor %}
+              </ul>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+{% endblock %}

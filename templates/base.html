@@ -1,0 +1,48 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Halytskyi</title>
+
+  <meta charset="UTF-8">
+  <meta name="description" content="Halytskyi Personal Website">
+  <meta name="keywords" content="personal, vcard, portfolio">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+  <link rel="stylesheet" href="{% static 'css/reset.css' %}">
+  <link rel="stylesheet" href="{% static 'cubeportfolio/css/cubeportfolio.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/owl.theme.css' %}">
+  <link rel="stylesheet" href="{% static 'css/owl.carousel.css' %}">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <link rel="stylesheet" href="{% static 'css/colors/yellow.css' %}">
+  <link rel="stylesheet" href="{% static 'icon-fonts/font-awesome-4.7.0/css/font-awesome.min.css' %}">
+  <link rel="stylesheet" href="{% static 'icon-fonts/web-design/flaticon.css' %}">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900">
+</head>
+
+
+<body>
+<div class="wrapper top_60 container">
+  <div class="row">
+
+    {% include 'includes/bio.html' %}
+
+    <div id="ajax-tab-container" class="col-lg-9 col-md-8 tab-container">
+
+      {% include 'includes/navigation.html' %}
+
+      <div class="col-md-12">
+          {% block container %} {% endblock %}
+      </div>
+      {% include 'includes/footer.html' %}
+
+    </div>
+  </div>
+</div>
+
+{% include 'includes/scripts.html' %}
+
+</body>
+</html>
