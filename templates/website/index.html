@@ -35,42 +35,14 @@
               <div class="section-title bottom_45"><span></span>
                 <h2>Skills</h2></div>
               <ul class="skill-list">
+                {% for skill in skills %}
                 <li>
-                  <h3>Python</h3>
+                  <h3>{{ skill.name }}</h3>
                   <div class="progress">
-                    <div class="percentage" style="width:70%;"></div>
+                    <div class="percentage" style="width:{{ skill.percentage }}%;"></div>
                   </div>
                 </li>
-                <li>
-                  <h3>Linux</h3>
-                  <div class="progress">
-                    <div class="percentage" style="width:40%;"></div>
-                  </div>
-                </li>
-                <li>
-                  <h3>MySQL</h3>
-                  <div class="progress">
-                    <div class="percentage" style="width:40%;"></div>
-                  </div>
-                </li>
-                <li>
-                  <h3>HTML</h3>
-                  <div class="progress">
-                    <div class="percentage" style="width:70%;"></div>
-                  </div>
-                </li>
-                <li>
-                  <h3>CSS</h3>
-                  <div class="progress">
-                    <div class="percentage" style="width:40%;"></div>
-                  </div>
-                <li>
-                  <h3>Git</h3>
-                  <div class="progress">
-                    <div class="percentage" style="width:40%;"></div>
-                  </div>
-                </li>
-                </li>
+                {% endfor %}
               </ul>
             </section>
 
@@ -78,30 +50,14 @@
               <div class="section-title bottom_45"><span></span>
                 <h2>Languages</h2></div>
               <ul class="skill-list">
+                {% for language in languages reversed %}
                 <li>
-                  <h3>English (B2)</h3>
+                  <h3>{{ language.name }}</h3>
                   <div class="progress">
-                    <div class="percentage" style="width:65%;"></div>
+                    <div class="percentage" style="width:{{ language.lvl }}%;"></div>
                   </div>
                 </li>
-                <li>
-                  <h3>German (B2)</h3>
-                  <div class="progress">
-                    <div class="percentage" style="width:65%;"></div>
-                  </div>
-                </li>
-                <li>
-                  <h3>Ukrainian (Native)</h3>
-                  <div class="progress">
-                    <div class="percentage" style="width:100%;"></div>
-                  </div>
-                </li>
-                <li>
-                  <h3>Russian (Native)</h3>
-                  <div class="progress">
-                    <div class="percentage" style="width:100%;"></div>
-                  </div>
-                </li>
+                {% endfor %}
               </ul>
             </section>
           </div>
