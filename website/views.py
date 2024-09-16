@@ -1,11 +1,23 @@
 from django.shortcuts import render
 from django.views import generic
 
-from website.models import WorkExperience, StudyExperience, PortfolioExample, Certificate
+from website.models import (
+    WorkExperience,
+    StudyExperience,
+    PortfolioExample,
+    Certificate,
+    Skill,
+    Language
+)
 
 
 def index(request):
-    return render(request, "website/index.html")
+    context = {
+        "skills": Skill.objects.all,
+        "languages": Language.objects.all,
+    }
+
+    return render(request, "website/index.html", context=context)
 
 
 def resume(request):
