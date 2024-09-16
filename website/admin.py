@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import (Certificate, Language, PortfolioExample, Skill, StudyExperience, WorkExperience)
+from .models import (Certificate, Language, PortfolioExample, Skill, StudyExperience, WorkExperience, Document)
 
 
 @admin.register(Skill)
@@ -34,5 +34,11 @@ class PortfolioExampleAdmin(admin.ModelAdmin):
 
 @admin.register(Certificate)
 class CertificateAdmin(admin.ModelAdmin):
+    search_fields = ("name",)
+    list_filter = ("name",)
+
+
+@admin.register(Document)
+class DocumentAdmin(admin.ModelAdmin):
     search_fields = ("name",)
     list_filter = ("name",)
