@@ -20,6 +20,13 @@ def portfolio_file_path(instance, filename):
     return os.path.join(f"portfolio-content/", filename)
 
 
+def decument_file_path(instance, filename):
+    _, extension = os.path.splitext(filename)
+    filename = f"{slugify(instance.name)}-{uuid.uuid4()}{extension}"
+
+    return os.path.join(f"document/", filename)
+
+
 class Skill(models.Model):
     name = models.CharField(max_length=255, unique=True)
     percentage = models.IntegerField(
@@ -79,6 +86,14 @@ class Certificate(models.Model):
     name = models.CharField(max_length=255)
     credential_link = models.CharField(max_length=255)
     photo = models.ImageField(upload_to=certif_file_path)
+
+    def __str__(self):
+        return self.name
+
+
+class Document(models.Model):
+    name = models.CharField(max_length=255)
+    document = models.FileField(upload_to=decument_file_path)
 
     def __str__(self):
         return self.name
