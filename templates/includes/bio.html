@@ -1,3 +1,6 @@
+{% load static %}
+
+
 <div class="col-lg-3 col-md-4">
   <div class="profile">
     <div class="profile-name">
@@ -5,19 +8,19 @@
       <span class="job">Python Developer</span>
     </div>
     <figure class="profile-image">
-      <img src="/static/images/avatar.png" alt="">
+      <img src="{% static 'images/avatar.png' %}" alt="">
     </figure>
     <ul class="profile-information">
       <li></li>
       <li><p><span>Birthday:</span> 22 Juli 2002</p></li>
       <li><span>City:</span> <a href="https://maps.app.goo.gl/NxjzYMBPJiJpfMwaA" target="_blank">Krefeld</a></li>
-      <li><span>Phone (DE):</span> <a href="tel:+4917627169632" target="_blank">+49-176-27169632</a></li>
+      <li><span>Phone (DE):</span> <a href="tel:+4917627169632" target="_blank">+49-157-50674009</a></li>
       <li><span>Phone (UA):</span> <a href="tel:+380972964484" target="_blank">+38-097-2964484</a></li>
-      <li><p><span>Email:</span> <a href="mailto:haldaniko@gmail.com" target="_blank">haldaniko@gmail.com</a></p>
+      <li><span>Email:</span> <a href="mailto:haldaniko@gmail.com" target="_blank">haldaniko@gmail.com</a>
       </li>
     </ul>
     <div class="col-md-12">
-      <a target="_blank" class="black-link user-select-none" href="/halytskyi_cv">
+      <a target="_blank" class="black-link user-select-none" href="{% url 'website:cv' %}">
         <button class="site-btn icon">Download Cv<i class="fa fa-download" aria-hidden="true"></i></button>
       </a>
 

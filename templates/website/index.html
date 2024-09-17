@@ -9,20 +9,19 @@
         <section class="about-me line col-md-12 padding_30 padbot_45">
           <div class="section-title"><span></span>
             <h2>About Me</h2></div>
-          <p class="font-16 top_30">Hello there! 👋 I'm Daniil, a 21-year-old aspiring programmer originally
-            from Ukraine, currently navigating the world of technology and languages in Germany.<br><br>
+          <p class="font-16 top_30">Hello there! 👋 I'm Daniil, a Python Developer with extensive expertise in Django
+            ORM, Django Rest Framework, and Object-Oriented Programming (OOP). Proficient in designing scalable web
+            applications using Django, with a solid grasp of TDD, SOLID principles, and design patterns. Experienced in
+            integrating complex systems, implementing RESTful APIs, and managing databases like PostgreSQL and MongoDB.
 
-            By day, I'm a devoted student at <a href="https://mate.academy/en">Mate Academy</a>.
-            My toolbox includes Python (with some frameworks), SQL, Linux, HTML, CSS, and Git.
-            Beyond coding, I have successfully completed a B2 level course in German,
-            passed the exam, and obtained the certificate. Additionally,
-            I am advancing my proficiency in English.<br><br>
+            <br><br>Skilled in web scraping, data analysis, and leveraging machine learning techniques. Strong
+            understanding of Agile methodologies, with hands-on experience using tools like Jira and Trello.
+            Proficient in both English and German at an Upper-Intermediate level, facilitating effective communication
+            in diverse team environments.
 
-            This website serves as my digital canvas for my development as an aspiring programmer and I am
-            constantly updating and improving it.<br><br>
-
-            Visit my portfolio and certificates pages to check out my projects and certificates from online
-            courses.<br><br>
+            <br><br>This website serves as my digital canvas for my development as a programmer and I am
+            constantly updating and improving it. Visit my portfolio and certificates pages to check out my projects
+            and certificates<br><br>
 
             I'm open to job offers or internships! :)
           </p>
@@ -36,12 +35,12 @@
                 <h2>Skills</h2></div>
               <ul class="skill-list">
                 {% for skill in skills %}
-                <li>
-                  <h3>{{ skill.name }}</h3>
-                  <div class="progress">
-                    <div class="percentage" style="width:{{ skill.percentage }}%;"></div>
-                  </div>
-                </li>
+                  <li>
+                    <h3>{{ skill.name }}</h3>
+                    <div class="progress">
+                      <div class="percentage" style="width:{{ skill.percentage }}%;"></div>
+                    </div>
+                  </li>
                 {% endfor %}
               </ul>
             </section>
@@ -51,12 +50,12 @@
                 <h2>Languages</h2></div>
               <ul class="skill-list">
                 {% for language in languages reversed %}
-                <li>
-                  <h3>{{ language.name }}</h3>
-                  <div class="progress">
-                    <div class="percentage" style="width:{{ language.lvl }}%;"></div>
-                  </div>
-                </li>
+                  <li>
+                    <h3>{{ language.name }}</h3>
+                    <div class="progress">
+                      <div class="percentage" style="width:{{ language.lvl }}%;"></div>
+                    </div>
+                  </li>
                 {% endfor %}
               </ul>
             </section>
