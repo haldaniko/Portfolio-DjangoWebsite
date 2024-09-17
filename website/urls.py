@@ -5,7 +5,7 @@ from website.views import (
     contact,
     PortfolioExampleListView,
     CertificateListView,
-    PortfolioExampleDetailView
+    PortfolioExampleDetailView, cv_view
 )
 
 app_name = "website"
@@ -16,5 +16,6 @@ urlpatterns = [
     path("portfolio/", PortfolioExampleListView.as_view(), name="portfolio"),
     path('portfolio/<int:pk>/', PortfolioExampleDetailView.as_view(), name='portfolio_detail'),
     path("certificates/", CertificateListView.as_view(), name="certificates"),
-    path("contact/", contact, name="contact")
+    path("contact/", contact, name="contact"),
+    path("halytskyi_cv/", cv_view, name="cv")
 ]

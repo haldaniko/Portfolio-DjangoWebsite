@@ -1,4 +1,5 @@
-from django.shortcuts import render
+from django.http import HttpResponse, FileResponse
+from django.shortcuts import render, get_object_or_404
 from django.views import generic
 
 from website.models import (
@@ -7,7 +8,7 @@ from website.models import (
     PortfolioExample,
     Certificate,
     Skill,
-    Language
+    Language, Document
 )
 
 
@@ -31,6 +32,12 @@ def resume(request):
 
 def contact(request):
     return render(request, "website/contact.html")
+
+
+def cv_view(request):
+    document = get_object_or_404(Document, pk=1)
+    response = FileResponse(document.document.open(), content_type='application/pdf')
+    return response
 
 
 class PortfolioExampleListView(generic.ListView):
