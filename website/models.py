@@ -50,7 +50,7 @@ class WorkExperience(models.Model):
     company_name = models.CharField(max_length=255)
     company_link = models.CharField(max_length=255, blank=True, null=True)
     start_date = models.DateField()
-    end_date = models.DateField()
+    end_date = models.DateField(blank=True, null=True)
     location = models.CharField(max_length=255)
     description = models.TextField()
 
@@ -62,7 +62,7 @@ class StudyExperience(models.Model):
     school_name = models.CharField(max_length=255)
     school_link = models.CharField(max_length=255, blank=True, null=True)
     start_date = models.DateField()
-    end_date = models.DateField()
+    end_date = models.DateField(blank=True, null=True)
     location = models.CharField(max_length=255)
     descritpion = models.TextField()
 
