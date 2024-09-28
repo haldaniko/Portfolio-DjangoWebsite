@@ -10,23 +10,21 @@
             <h2>Portfolio</h2></div>
           <div class="filters-container portfolio-filter">
             <div data-filter="*" class="user-select-none cbp-filter-item cbp-filter-item-active">All</div>
-            <div data-filter=".websites" class="user-select-none cbp-filter-item">Web sites</div>
-            <div data-filter=".chatbots" class="user-select-none cbp-filter-item">Chat bots</div>
-            <div data-filter=".scripts" class="user-select-none cbp-filter-item">Scripts</div>
+            {% for tag in tags %}
+              <div data-filter=".{{ tag.name }}"
+                   class="cbp-filter-item user-select-none">{{ tag.name }}</div>
+            {% endfor %}
           </div>
         </div>
         <div class="grid-container top_60 portfolio">
-          {% for portfolioexample in portfolioexample_list %}
-            <div class="cbp-item websites">
-              <a href="{% url 'website:portfolio_detail' pk=portfolioexample.pk %}">
+          {% for portfolioexample in portfolioexample_list reversed%}
+            <div class="cbp-item {% for tag in portfolioexample.tag.all %}{{ tag.name }} {% endfor %}">
+              <a target="_blank" href="{{ portfolioexample.github_source }}">
                 <figure>
-                  <div class="icon">
-                    <i class="fa fa-clone" aria-hidden="true"></i>
-                  </div>
-                  <img src="{{ portfolioexample.description_photo.url }}" alt="">
+                  <img src="{{ portfolioexample.photo.url }}" alt="">
                   <figcaption>
-                    <span class="title">{{ portfolioexample.name }}</span><br/>
-                    <span class="info">{{ portfolioexample.description_small }}</span>
+                    <p class="title">{{ portfolioexample.name }}</p><br/>
+                    <span class="info">{{ portfolioexample.description }}</span>
                   </figcaption>
                 </figure>
               </a>
