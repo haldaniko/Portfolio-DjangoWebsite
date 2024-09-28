@@ -1,15 +1,24 @@
-from django.http import HttpResponse, FileResponse
-from django.shortcuts import render, get_object_or_404
+from django.http import FileResponse
+from django.shortcuts import render, get_object_or_404, redirect
 from django.views import generic
-
+from dotenv import load_dotenv
+import telebot
+import os
 from website.models import (
     WorkExperience,
     StudyExperience,
     PortfolioExample,
     Certificate,
     Skill,
-    Language, Document, CertificateTag, PortfolioTag
+    Language,
+    Document,
+    CertificateTag,
+    PortfolioTag
 )
+
+load_dotenv()
+TELEGRAM_BOT_TOKEN = os.getenv('TELEGRAM_BOT_TOKEN')
+TELEGRAM_USER_ID = int(os.getenv('TELEGRAM_USER_ID'))
 
 
 def index(request):
@@ -31,7 +40,20 @@ def resume(request):
 
 
 def contact(request):
-    return render(request, "website/contact.html")
+    if request.method == 'POST':
+        bot = telebot.TeleBot(TELEGRAM_BOT_TOKEN)
+
+        name = request.POST.get('name')
+        email = request.POST.get('email')
+        message = request.POST.get('message')
+
+        telegram_message = (f"New message from your website!"
+                            f"\n\nName: {name}\nEmail: {email}\nMessage: {message}")
+        bot.send_message(TELEGRAM_USER_ID, telegram_message)
+
+        return redirect("website:index")
+
+    return render(request, 'website/contact.html')
 
 
 def document_view(request, name):
@@ -48,6 +70,7 @@ class PortfolioExampleListView(generic.ListView):
         context = super().get_context_data(**kwargs)
         context['tags'] = PortfolioTag.objects.all()
         return context
+
 
 class PortfolioExampleDetailView(generic.DetailView):
     model = PortfolioExample

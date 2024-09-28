@@ -10,7 +10,8 @@
             <span></span>
             <h2>Contact Form</h2>
           </div>
-          <form class="site-form" method="post" action="#">
+          <form class="site-form" method="post" action="{% url 'website:contact' %}">
+            {% csrf_token %}
             <div class="row">
               <div class="col-md-6">
                 <input class="site-input" placeholder="Name" name="name">
