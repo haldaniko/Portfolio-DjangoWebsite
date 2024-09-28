@@ -70,22 +70,19 @@ class StudyExperience(models.Model):
         return f"{self.school_name}"
 
 
-class PortfolioExample(models.Model):
-    name = models.CharField(max_length=255)
-    description_small = models.CharField(max_length=255)
-    description_photo = models.ImageField(upload_to=portfolio_file_path)
-    project_photo = models.ImageField(upload_to=portfolio_file_path)
-    about = models.TextField()
-    github_source = models.CharField(max_length=255)
+class PortfolioTag(models.Model):
+    name = models.CharField(max_length=86)
 
     def __str__(self):
         return self.name
 
 
-class Certificate(models.Model):
+class PortfolioExample(models.Model):
     name = models.CharField(max_length=255)
-    credential_link = models.CharField(max_length=255)
-    photo = models.ImageField(upload_to=certif_file_path)
+    description = models.CharField(max_length=255)
+    photo = models.ImageField(upload_to=portfolio_file_path)
+    tag = models.ManyToManyField(PortfolioTag)
+    github_source = models.CharField(max_length=255)
 
     def __str__(self):
         return self.name
@@ -97,3 +94,22 @@ class Document(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class CertificateTag(models.Model):
+    name = models.CharField(max_length=86)
+
+    def __str__(self):
+        return self.name
+
+
+class Certificate(models.Model):
+    name = models.CharField(max_length=255)
+    tag = models.ManyToManyField(CertificateTag)
+    credential_link = models.CharField(max_length=255, null=True, blank=True)
+    pdf_link = models.OneToOneField(Document, on_delete=models.CASCADE, null=True, blank=True)
+    photo = models.ImageField(upload_to=certif_file_path)
+
+    def __str__(self):
+        return self.name
+
