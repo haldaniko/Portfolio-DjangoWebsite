@@ -8,7 +8,7 @@ from website.models import (
     PortfolioExample,
     Certificate,
     Skill,
-    Language, Document
+    Language, Document, CertificateTag, PortfolioTag
 )
 
 
@@ -34,8 +34,8 @@ def contact(request):
     return render(request, "website/contact.html")
 
 
-def cv_view(request):
-    document = get_object_or_404(Document, pk=1)
+def document_view(request, name):
+    document = get_object_or_404(Document, name=name)
     response = FileResponse(document.document.open(), content_type='application/pdf')
     return response
 
@@ -44,6 +44,10 @@ class PortfolioExampleListView(generic.ListView):
     model = PortfolioExample
     template_name = "website/portfolio.html"
 
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['tags'] = PortfolioTag.objects.all()
+        return context
 
 class PortfolioExampleDetailView(generic.DetailView):
     model = PortfolioExample
@@ -53,3 +57,8 @@ class PortfolioExampleDetailView(generic.DetailView):
 class CertificateListView(generic.ListView):
     model = Certificate
     template_name = "website/certificates.html"
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['tags'] = CertificateTag.objects.all()
+        return context
