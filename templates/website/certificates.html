@@ -9,30 +9,27 @@
         <div class="col-md-12 content-header bottom_15">
           <div class="section-title top_30 bottom_30"><span></span>
             <h2 class="user-select-none">Certificates</h2></div>
-            <div class="filters-container certificates-filter user-select-none">
+          <div class="filters-container certificates-filter user-select-none">
             <div data-filter="*" class="cbp-filter-item user-select-none">All</div>
-            <div data-filter=".linux" class="cbp-filter-item user-select-none">Linux</div>
-            <div data-filter=".python" class="cbp-filter-item user-select-none">Python</div>
-            <div data-filter=".sql" class="cbp-filter-item user-select-none">SQL</div>
-            <div data-filter=".web" class="cbp-filter-item user-select-none">Web</div>
-            <div data-filter=".language" class="cbp-filter-item user-select-none">Language</div>
+            {% for tag in tags %}
+              <div data-filter=".{{ tag.name }}"
+                   class="cbp-filter-item user-select-none">{{ tag.name }}</div>
+            {% endfor %}
           </div>
         </div>
         <div class="grid-container top_60 certificates">
           {% for certificate in certificate_list %}
-            <div class="cbp-item linux">
+            <div class="cbp-item {% for tag in certificate.tag.all %}{{ tag.name }} {% endfor %}">
               <a href="{{ certificate.photo.url }}" class="cbp-lightbox">
                 <figure>
-                  <div class="icon">
-                    <i class="fa fa-picture-o" aria-hidden="true"></i>
-                  </div>
                   <img src="{{ certificate.photo.url }}" alt="">
                 </figure>
               </a>
               <figcaption>
-                <span class="title">Introduction to Linux</span><br/>
+                <span class="title">{{ certificate.name }}</span><br/>
                 <a target="_blank"
-                   href="{{ certificate.credential_link }}"
+                   href="
+                       {% if certificate.credential_link %}{{ certificate.credential_link }}{% else %}{{ certificate.pdf_link.document.url }}{% endif %}"
                    class="external-link show-credential-button">Show credential</a>
               </figcaption>
             </div>
