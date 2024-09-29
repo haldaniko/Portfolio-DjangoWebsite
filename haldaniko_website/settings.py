@@ -10,7 +10,7 @@ SECRET_KEY = os.getenv('DJANGO_SECRET_KEY')
 
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['haldaniko.com.ua', 'www.haldaniko.com.ua']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
